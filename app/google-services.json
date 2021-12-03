@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "668635512839",
+    "firebase_url": "https://dish-c7c56-default-rtdb.firebaseio.com",
+    "project_id": "dish-c7c56",
+    "storage_bucket": "dish-c7c56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668635512839:android:a267bc7dee6d630f8aaaa2",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668635512839-dnvjknvf5hoktutts3s9va4dhq8ef187.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1xEk-E523qkn6aqoxxxvpVkcXBPAJfZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "668635512839-dnvjknvf5hoktutts3s9va4dhq8ef187.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "668635512839-15ibugrngrclsvh5l84ce9ln9eb70p0l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Jorge-Zapata.RestaurantApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
