@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/signUpInfoPage"
+    tools:context=".SignUpInfoActivity">
+
+    <Button
+        android:id="@+id/mainButtonSignUpInfo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:stateListAnimator="@null"
+        android:layout_marginTop="29dp"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:circularflow_defaultRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpInfoBirthday" />
+
+    <EditText
+        android:id="@+id/signUpInfoFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:height="44dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="text"
+        android:layout_marginTop="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpInfoLabelMain" />
+
+    <EditText
+        android:id="@+id/signUpInfoLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:height="44dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpInfoFirstName" />
+
+    <Button
+        android:id="@+id/signUpInfoBirthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:paddingLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:height="44dp"
+        android:ems="10"
+        android:textSize="16dp"
+        android:textAlignment="textStart"
+        android:hint="Birthday"
+        android:text="Select Birthday"
+        android:stateListAnimator="@null"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpInfoGender" />
+
+    <TextView
+        android:id="@+id/signUpInfoLabelMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:height="35dp"
+        android:text="Sign Up"
+        android:textSize="17dp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/signUpInfoGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpInfoLastName" />
+</androidx.constraintlayout.widget.ConstraintLayout>
