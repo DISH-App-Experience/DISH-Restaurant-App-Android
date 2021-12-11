@@ -46,39 +46,27 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
-        android:id="@+id/googleButton"
-        android:layout_height="60dp"
-        android:textAllCaps="false"
-        app:circularflow_defaultRadius="50dp"
-        android:layout_width="match_parent"
-        android:layout_marginTop="47dp"
-        android:text="Button"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeDesc" />
-
-    <Button
         android:id="@+id/emailButton"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="19dp"
+        android:stateListAnimator="@null"
         android:layout_marginRight="25dp"
+        android:layout_marginTop="47dp"
         android:text="Button"
         android:textAllCaps="false"
         app:circularflow_defaultRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/googleButton" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomeDesc" />
 
     <Button
         android:id="@+id/signUpButton"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginLeft="25dp"
+        android:stateListAnimator="@null"
         android:layout_marginBottom="30dp"
         android:layout_marginRight="25dp"
         android:text="Button"

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
         <activity
+            android:name=".SignUpInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".RandomActivity"
             android:exported="false" />
         <activity

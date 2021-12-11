@@ -69,6 +69,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:layout_marginTop="29dp"
+        android:stateListAnimator="@null"
         android:text="Continue"
         android:textStyle="bold"
         android:textAllCaps="false"
@@ -87,6 +88,7 @@
         android:layout_marginRight="25dp"
         android:text="Button"
         android:textStyle="bold"
+        android:stateListAnimator="@null"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

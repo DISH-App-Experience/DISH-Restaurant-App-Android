@@ -72,6 +72,7 @@
         android:text="Sign In"
         android:textStyle="bold"
         android:textAllCaps="false"
+        android:stateListAnimator="@null"
         app:circularflow_defaultRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.68"
@@ -81,6 +82,7 @@
     <Button
         android:id="@+id/signInButonFromSignUp"
         android:layout_width="match_parent"
+        android:stateListAnimator="@null"
         android:layout_height="60dp"
         android:layout_marginLeft="25dp"
         android:layout_marginBottom="30dp"

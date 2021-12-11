@@ -1,5 +1,6 @@
 package com.example.app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -16,8 +17,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
+
+    private FirebaseAuth auth;
+
+    FirebaseAuth mAuth;
+
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +69,7 @@ public class SignUpActivity extends AppCompatActivity {
                 if ((TextUtils.isEmpty(email)) || (TextUtils.isEmpty(password))) {
                     alert("Error", "Please Fill In All Fields");
                 } else {
+                    signUpUser(email, password);
                     System.out.println(email);
                     System.out.println(password);
                 }
@@ -69,6 +85,22 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
+            }
+        });
+    }
+
+    private void signUpUser(String email, String password) {
+        auth.getInstance().createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    String uid = mAuth.getInstance().getCurrentUser().getUid().toString();
+                    mDatabase = FirebaseDatabase.getInstance().getReference();
+                    mDatabase.child("Apps").child(Restaurant.id).child("Users").child(uid).child("email").setValue(email);
+                    startActivity(new Intent(SignUpActivity.this, SignUpInfoActivity.class));
+                } else {
+                    alert("Error", "Please Try Again");
+                }
             }
         });
     }
